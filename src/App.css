@@ -1,38 +1,43 @@
-.App {
+.titleBar {
+  text-align: center;
+  background-color: red;
+  justify-content: center;
+  line-height: 3rem;
+  height: 3rem;
+  margin: 4px;
+}
+
+.dateBar {
+  text-align: center;
+  line-height: 3rem;
+  width: 100%;
+  font-size: small;
+  background-color: skyblue;
+  height: 3rem;
+}
+
+.mealCard {
+  margin: 1px;
+}
+
+.mealCardImageContainer {
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mealCardImage {
+  width: 90px;
+  height: 90px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mealTimeRow {
+  padding-top: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.centeredCol {
+  text-align: center;
+}
+.centeredRow {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
