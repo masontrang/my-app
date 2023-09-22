@@ -1,17 +1,14 @@
-import "./App.css";
+import "./Home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import DayView from "./components/DayView/DayView";
-import DateBar from "./components/DateBar/DateBar";
+import DayView from "../DayView/DayView";
+import NavBar from "../NavBar/NavBar";
+import ViewSelector from "../ViewSelector/ViewSelector";
 
-import Accordion from "react-bootstrap/Accordion";
-
-function App() {
+function Home() {
   const createDateArray = function (increment) {
     let todaysDate = new Date(
       new Date().getFullYear(),
@@ -34,8 +31,6 @@ function App() {
 
   const [dateIncrement, setDateIncrement] = useState(0);
 
-  
-
   useEffect(() => {
     setDates(createDateArray(dateIncrement));
   }, [dateIncrement]);
@@ -45,15 +40,15 @@ function App() {
 
   return (
     <>
+      <NavBar />
+      <br />
       <Container>
-        <Row>
-          <Col className="titleBar">My App Title</Col>
-        </Row>
-
-        <DayView />
+        <ViewSelector />
       </Container>
+
+      {/* <DayView /> */}
     </>
   );
 }
 
-export default App;
+export default Home;

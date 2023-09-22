@@ -21,9 +21,9 @@ function MealTimes(props) {
   );
   return (
     <>
-      <MealTime mealTime={"breakfast"} mealItems={breakfastMealItems} />
-      <MealTime mealTime={"lunch"} mealItems={lunchMealItems} />
-      <MealTime mealTime={"dinner"} mealItems={dinnerMealItems} />
+      <MealTime mealTime={"Breakfast"} mealItems={breakfastMealItems} />
+      <MealTime mealTime={"Lunch"} mealItems={lunchMealItems} />
+      <MealTime mealTime={"Dinner"} mealItems={dinnerMealItems} />
     </>
   );
 }

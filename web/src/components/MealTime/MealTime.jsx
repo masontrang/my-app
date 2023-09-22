@@ -6,6 +6,8 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 
+import MealCard from "../MealCard/MealCard";
+
 function MealTime(props) {
   return (
     <>
@@ -20,40 +22,7 @@ function MealTime(props) {
                     return (
                       <Row key={index}>
                         <Col>
-                          <Card className="mealCard">
-                            <Card.Body>
-                              <Row className="mealCardImageContainer">
-                                <Col xs={1}>
-                                  <img
-                                    className="mealCardImage"
-                                    src="../../foodicon_temp.png"
-                                  />
-                                </Col>
-                                <Col xs={10}>
-                                  <Card.Title>
-                                    Recipe Name : {mealItem.recipeName}
-                                  </Card.Title>
-                                  <Card.Text>
-                                    Date :
-                                    {mealItem.date &&
-                                      mealItem.date
-                                        .toString()
-                                        .replace(
-                                          " 00:00:00 GMT-0700 (Pacific Daylight Time)",
-                                          ""
-                                        )}
-                                    <br />
-                                    MealTime : {mealItem.mealTime}
-                                    <br />
-                                    RecipeId : {mealItem.recipeId}
-                                  </Card.Text>
-                                  <Button variant="primary">
-                                    Go somewhere
-                                  </Button>
-                                </Col>
-                              </Row>
-                            </Card.Body>
-                          </Card>
+                          <MealCard mealItem={mealItem} />
                         </Col>
                       </Row>
                     );

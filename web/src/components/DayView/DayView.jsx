@@ -42,7 +42,7 @@ function DayView() {
     <>
       <Row className="centeredRow">
         <DateBar
-          dates={dates}
+          today={dates[0]}
           dateIncrement={dateIncrement}
           setDateIncrement={setDateIncrement}
         />

@@ -1,0 +1,10 @@
+.dateBar {
+  text-align: center;
+  line-height: 4rem;
+
+  font-size: larger;
+  font-weight: bold;
+  background-color: skyblue;
+  height: 4rem;
+  border-radius: 10px;
+}

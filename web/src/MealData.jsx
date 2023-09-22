@@ -1,3 +1,4 @@
+import allRecipes from "./RecipeData";
 function MealItem(date, mealTime, recipeId, recipeName, recipeDescription) {
   this.date = date;
   this.mealTime = mealTime;
@@ -13,7 +14,7 @@ const myMeal1 = new MealItem(
     new Date().getDate()
   ),
   "Breakfast",
-  "RecipeId",
+  "RecipeId123",
   "MyRecipeName1",
   "MyRecipeDescription"
 );
@@ -25,7 +26,7 @@ const myMeal2 = new MealItem(
     new Date().getDate()
   ),
   "Lunch",
-  "RecipeId",
+  "RecipeId123",
   "MyRecipeName1",
   "MyRecipeDescription"
 );
@@ -37,7 +38,7 @@ const myMeal3 = new MealItem(
     new Date().getDate()
   ),
   "Dinner",
-  "RecipeId",
+  "RecipeId123",
   "MyRecipeName1",
   "MyRecipeDescription"
 );
