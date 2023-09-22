@@ -1,4 +1,3 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
@@ -6,11 +5,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import DayView from "./components/DayView/DayView";
-
 import Accordion from "react-bootstrap/Accordion";
+import MealTimes from "../MealTimes/MealTimes";
+import DateBar from "../DateBar/DateBar";
 
-function App() {
+function DayView() {
   const createDateArray = function (increment) {
     let todaysDate = new Date(
       new Date().getFullYear(),
@@ -39,38 +38,19 @@ function App() {
   let [dates, setDates] = useState([]);
   const mealTimes = ["Breakfast", "Lunch", "Dinner"];
 
-  function MealItem(date, mealTime, recipeId, recipeName, recipeDescription) {
-    this.date = date;
-    this.mealTime = mealTime;
-    this.recipeId = recipeId;
-    this.recipeName = recipeName;
-    this.recipeDescription = recipeDescription;
-  }
-
-  const myMeal = new MealItem(
-    new Date(
-      new Date().getFullYear(),
-      new Date().getMonth(),
-      new Date().getDate()
-    ),
-    "Breakfast",
-    123,
-    "MyRecipeName",
-    "MyRecipeDescription"
-  );
-  console.log("mymeal", myMeal);
-  const mealItems = [myMeal, myMeal];
-
   return (
     <>
-      <Container>
-        <Row>
-          <Col className="titleBar">My App Title</Col>
-        </Row>
-        <DayView />
-      </Container>
+      <Row className="centeredRow">
+        <DateBar
+          dates={dates}
+          dateIncrement={dateIncrement}
+          setDateIncrement={setDateIncrement}
+        />
+      </Row>
+
+      <MealTimes today={dates[0]} />
     </>
   );
 }
 
-export default App;
+export default DayView;
