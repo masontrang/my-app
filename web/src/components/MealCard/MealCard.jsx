@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
 import RecipeInfo from "../RecipeInfo/RecipeInfo";
+import "./MealCard.css";
 
 function MealCard(props) {
   const mealItem = props.mealItem;

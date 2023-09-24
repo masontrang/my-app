@@ -3,3 +3,11 @@
   /* align-items: space-between; */
   /* justify-content: center; */
 }
+
+.RecipeInfoRow {
+  margin: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: start;
+}

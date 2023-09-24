@@ -5,6 +5,8 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
 import RecipeInfo from "../RecipeInfo/RecipeInfo";
+import Image from "react-bootstrap/Image";
+import "./RecipeCard.css";
 
 function RecipeCard(props) {
   const recipe = props.recipe;
@@ -13,11 +15,11 @@ function RecipeCard(props) {
   const handleShow = () => setShow(true);
   return (
     <>
-      <Card className="mealCard">
+      <Card className="recipeCard">
         <Card.Body>
-          <Row className="mealCardImageContainer">
+          <Row className="recipeCardImageContainer">
             <Col>
-              <img className="mealCardImage" src={recipe.imageURL} />
+              <Image className="recipeCardImage" src={recipe.imageURL} fluid />
             </Col>
             <Col>
               <Card.Title>Recipe Name : {recipe.recipeName}</Card.Title>

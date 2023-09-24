@@ -6,6 +6,19 @@ import "./DateBar.css";
 function DateBar(props) {
   return (
     <>
+      <Row>
+        <div className="dateBar">
+          {props.today &&
+            props.today
+              .toString()
+              .replace(" 00:00:00 GMT-0700 (Pacific Daylight Time)", "")}
+          {props.day7 &&
+            " to " +
+              props.day7
+                .toString()
+                .replace(" 00:00:00 GMT-0700 (Pacific Daylight Time)", "")}
+        </div>
+      </Row>
       <Row className="centeredRow">
         <Col className="centeredCol">
           <Button
@@ -14,11 +27,8 @@ function DateBar(props) {
             Back
           </Button>
         </Col>
-        <Col className="dateBar">
-          {props.today &&
-            props.today
-              .toString()
-              .replace(" 00:00:00 GMT-0700 (Pacific Daylight Time)", "")}
+        <Col className="centeredCol">
+          <Button onClick={() => props.setDateIncrement(0)}>Today</Button>
         </Col>
         <Col className="centeredCol">
           <Button

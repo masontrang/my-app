@@ -9,19 +9,21 @@ function RecipeInfo(props) {
       <Container className="RecipeInfo">
         {/* <Row> Recipe Id: {props.recipe.recipeId}</Row> */}
         <Image src={props.recipe.imageURL} thumbnail />
-        <Row>
+        <Row className="RecipeInfoRow">
           <Col>Cuisine Type: {props.recipe.cuisineType}</Col>
           <Col>Recipe Type: {props.recipe.recipeType}</Col>
         </Row>
-        <Row>
+        <Row className="RecipeInfoRow">
           <Col> Yield: {props.recipe.recipeYield}</Col>
           <Col> Prep Time: {props.recipe.prepTime}</Col>
           <Col> Cook Time: {props.recipe.cookTime}</Col>
         </Row>
-        <Row> Ingredients: {props.recipe.ingredients}</Row>
+        <Row className="RecipeInfoRow">
+          Ingredients: {props.recipe.ingredients}
+        </Row>
         <Row> Directions: {props.recipe.directions}</Row>
 
-        <Row>
+        <Row className="RecipeInfoRow">
           <Col> Recipe URL: {props.recipe.recipeURL}</Col>
         </Row>
       </Container>
